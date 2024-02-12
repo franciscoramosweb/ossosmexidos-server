@@ -16,7 +16,7 @@ app.use("/product", productRouter);
 
 console.log("hello")
 try {
-    mongoose.connect('mongodb+srv://franciscogramosweb:Sf.Rg.1023@storemern.aut22gd.mongodb.net/storeMERN');
+    mongoose.connect(process.env.MONGODBSTRING);
   } catch (error) {
     console.log(error);
   }
