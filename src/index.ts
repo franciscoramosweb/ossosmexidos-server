@@ -13,6 +13,8 @@ app.use(cors());
 app.use('/user',userRouter);
 app.use("/product", productRouter);
 
+console.log(process.env.MONGO_DB_STRING);
+
 try {
     mongoose.connect(process.env.MONGO_DB_STRING);
   } catch (error) {
